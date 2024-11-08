@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Waris Khan - Education & Research</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+    <div id="name"><a href="index.html">Waris Khan</a></div>
+    <ul id="main-menu">
+        <li><a href="#" onclick='window.open("https://virginiatech-my.sharepoint.com/:b:/g/personal/warisk_vt_edu/EaxdP57FzSFIiu3ELp6qhJAB4vv9YX829NjNsKUoWcvugg?e=rbDt9A, "_blank");'>CV</a></li>
+        <li><a href="publications.html">Research</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="beyond_research.html">Beyond Research</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+    <!-- Begin Education Section -->
+    <div id="education">
+        <h1>Education</h1>
+        <div class="content">
+            <p><b>Ph.D. in Mechanical Engineering</b> – Virginia Tech (2023 – Present)<br>
+            Coursework: Continuum Mechanics, Advanced Numerical Methods, Finite Element Method, Additive Manufacturing.</p>
+
+            <p><b>B.Tech in Aerospace Engineering</b> – Indian Institute of Space Science and Technology (IIST) (2019)<br>          
+            Coursework: Aerospace Structures, Optimization, Rocket Propulsion, Air Breathing Propulsion, Computational Fluid Dynamics.</p>
+            Awarded a 4-year fully funded scholarship based on academic merit from the Department of Space, Government of India.</p>
+        </div>
+    </div>
+    <!-- End Education Section -->
+
+    <!-- Begin Projects Section -->
+    <div id="projects">
+        <h1>Research Projects</h1>
+        <div class="content">
+            <p><b>Undergraduate Thesis: </b>
+            Study of Slosh in Rectangular Tanks – Developed FE MATLAB code and experimental setup to study sloshing waveheight and force.<br></p>
+
+            <p><b>Aerospace Vehicle Design:</b>
+            Preliminary ICBM Design – Optimized structural factors and enhanced warhead capacity.<br></p>
+
+            <p><b>Multivariable Optimization:</b>
+            Multivariable Optimization – Developed a C program for Genetic Algorithm and various optimization methods for complex functions.<br></p>
+
+            <p><b>Aerodynamics:</b>
+            Vortex Lattice Method – Developed a MATLAB code using the steady-state Vortex Lattice Method to simulate the coefficient of lift and drag in an elliptic wing.<br></p>
+
+            <p><b>Aerospace Structures:</b>
+            Functionally Graded Beams – Developed MATLAB code for analyzing functionally graded beams and solving Euler-Bernoulli beam equations.<br></p>
+        </div>
+    </div>
+    <!-- End Projects Section -->
+
+</div>
+
+<!-- The JavaScript -->
+<script type="text/javascript">
+    $(function() {
+        $('#main-menu li a').bind('click',function(event){
+            var $anchor = $(this);
+
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500,'easeInOutExpo');
+
+            event.preventDefault();
+        });
+    });
+
+    $(document).ready(function(){
+        $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+    });
+</script>
+
+</body>
+</html>
