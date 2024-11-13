@@ -13,46 +13,7 @@
 
 <style>
     /* Sidebar styling */
-    #sidebar {
-        width: 250px;
-        float: left;
-        padding: 20px;
-        text-align: center;
-        background-color: #f9f9f9;
-        border-right: 1px solid #ddd;
-    }
-    #sidebar img {
-        border-radius: 50%;
-        width: 230px;
-        height: 230px;
-		margin-top: 80px;
-        margin-bottom: 30px;
-        object-fit: cover; /* Ensures the image fills the area */
-    }
-    #sidebar .bio {
-        font-size: 14px;
-        margin: 10px 0;
-    }
-    #sidebar .contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #sidebar .contact-info a {
-        color: #333;
-        display: flex;
-        align-items: center;
-        font-size: 13px;
-        text-decoration: none;
-        margin: 5px 0;
-    }
-    #sidebar .contact-info i {
-        font-size: 18px;
-        margin-right: 8px;
-    }
-    #sidebar .contact-info a:hover {
-        color: tomato;
-    }
+    
     /* Main content styling */
     #container {
         margin-left: 100px; /* Space for the sidebar */
@@ -67,7 +28,15 @@
     .content {
         text-align: justify; /* Justify alignment for main content */
     }
-	
+    #about .content img{
+        margin-right: 0px; 
+        opacity: 0.8; 
+        border: 0px solid #edeada;
+        width: 85%;
+        margin-top: 40px;
+    }
+
+    
 </style>
 
 
@@ -93,9 +62,6 @@
         </a>
     </div>
 </div>
-
-
-<img src="images/profile_home.png" alt="synergy quantum academy" width="900px" class="center" style="margin-top: 400px;">
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -132,6 +98,7 @@ to.css" type="text/css" media="screen" charset="utf-8" />
 <!--Begin about Section-->
 	<div id="about">
         <div class="content">
+            <img src="images/profile_home.png" alt="synergy quantum academy">
 			<h1></h1>
 				<p style="margin-top: 0px">
 					Hello everyone! I am Waris Khan. I am a Ph.D. student in the Department of Mechanical Engineering at Virginia Tech, working in the Advanced Structures and Optimization Lab, led by <a href="https://me.vt.edu/people/faculty/acar-pinar.html" target="_blank" style="color: #FF5733; font-weight: bold;">Dr. Pinar Acar</a>
