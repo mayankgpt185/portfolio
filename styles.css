@@ -1,5 +1,7 @@
-body{
-	background-color: #ffffff;
+html,body{
+	height: 100%;
+	width: 100%;
+    background-color: #ffffff;
 	margin: 0px;
 	font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -21,45 +23,62 @@ a img{border:0px;}
 	margin-right: auto;
 	opacity: 0.8;
 }
-.my-container{
-	margin-top: 150px;
-	padding: 0 20px;
+
+.container{
+    display: flex;
 }
 
-.mycontent{
+.left-side{
+    /* width: 100%; */
+    position: relative;
+}
+.right-side{
+    position: relative;
+
+}
+
+.header{
+	background-color: #8aaae538;
+	padding: 0px 10px;
+	position: fixed;
+	top: 0;
+	width: -webkit-fill-available;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #8aaae538;
+	margin-left: 290px;
+}
+
+.insidecontainer{
+    margin: 10px;
+    margin-top: 120px;
+	margin-left: 250px;
+}
+
+.content{
 	margin: auto;
 	display: flex;
     flex-direction: column;
 }
-.mycontent img{
+.content img{
 	margin: auto;
 }
-.left-side{
-	position: relative;
-}
 
-.right-side{
-	position: relative;
-}
-
-#container{
-	/* width: 900px;   */
-	margin: 0 auto;
-	background-color: #ffffff;
-	overflow: auto;
-	padding-bottom: 50px;
-}
-
-#sidebar {
-	/* width: 250px; */
+.sidebar {
+	position: fixed;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 20px;
+	width: 250px;
 	/* float: left; */
+    /* height: 100%; */
 	padding: 20px;
 	text-align: center;
-	background-color: #f9f9f9;
-	border-right: 1px solid #ddd;
-	position: fixed;
+	background-color: #8aaae5a1;
+	border-right: 1px solid #8aaae5a1;
 }
-#sidebar img {
+.sidebar img {
 	border-radius: 50%;
 	width: 230px;
 	height: 230px;
@@ -67,16 +86,16 @@ a img{border:0px;}
 	margin-bottom: 10%;
 	object-fit: cover; /* Ensures the image fills the area */
 }
-#sidebar .bio {
+.sidebar .bio {
 	font-size: 14px;
 	margin: 10px 0;
 }
-#sidebar .contact-info {
+.sidebar .contact-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-#sidebar .contact-info a {
+.sidebar .contact-info a {
 	color: #333;
 	display: flex;
 	align-items: center;
@@ -84,44 +103,31 @@ a img{border:0px;}
 	text-decoration: none;
 	margin: 5px 0;
 }
-#sidebar .contact-info i {
+.sidebar .contact-info i {
 	font-size: 18px;
 	margin-right: 8px;
 }
-#sidebar .contact-info a:hover {
+.sidebar .contact-info a:hover {
 	color: tomato;
 }
-/****************************************************/
-/* HEADER */
-/****************************************************/
 
-#header{
-	/* width: 820px;  */
-	/* height: 115px; */
-	background-color: #ffffff;
-	padding: 0px 10px;
-	position: fixed;
-	top: 0;
-	width: -webkit-fill-available;
-    /* left: 50%;
-    transform: translateX(-50%); */
-	text-align: center;
-	/* margin-left: 290px; */
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid black;
-	position: fixed;
+.header{
+    display: flex;
+    align-items: center;
 }
 
-#header #name{
+.header ul{
+    list-style-type: none;
+    display: flex;
+}
+#name{
 	padding-top: 35px;
-	/* float: left; */
 	font: bold 38px/48px 'Garamond', monospace;
 	margin-right: 0px; 
 }
-#header #main-menu{ display:flex;padding-top:22px;}
-#header #main-menu li{
-	/* float: left; */
+
+.header #main-menu{ display:flex;padding-top:22px;}
+.header #main-menu li{
 	list-style: none;
 	margin-left: 24px;
 	font: bold 24px/48px 'Garamond', monospace;
@@ -129,18 +135,9 @@ a img{border:0px;}
 	transition: text-decoration 0.3s ease;
 }
 
-#header #main-menu li:hover {
-  opacity: 0.6;
-  /*text-decoration: underline;*/
-}
-
-/****************************************************/
-/* about SECTION */
-/****************************************************/
-
 #about{margin: 0px 76px; padding-top: 50px;}
 #about .content{overflow: auto;
-	margin-top: 115px;
+	/* margin-top: 60px; */
 	font: 16px/32px 'Georgia', monospace;}
 
 
@@ -218,13 +215,11 @@ a img{border:0px;}
   display: inline-block;
 }
 
-
-.myContainer{
-display: flex;
-height: 100%;
-}
-
-html,body{
-	height: 100%;
-	width: 100%;
+@media only screen and (max-width: 1050px){
+    .header,header ul,.header #main-menu{
+        display: block;
+    }
+    .insidecontainer{
+        margin-top: 250px;
+    }
 }
